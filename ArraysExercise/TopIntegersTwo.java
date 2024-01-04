@@ -15,7 +15,7 @@ public class TopIntegersTwo {
         int lastElementIndex = numbers.length - 1;
 
         for (int j = 0; j < lastElementIndex; j++) {
-            if (numbers[j] > numbers[j + 1]) {
+            if (numbers[j] > numbers[j + 1] && numbers[lastElementIndex] < numbers[j]){
                 System.out.print(numbers[j] + " ");
             }
         }
