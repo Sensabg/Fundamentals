@@ -12,13 +12,11 @@ public class TopIntegersTwo {
                 .mapToInt(Integer::parseInt)
                 .toArray();
 
-        int lastElementIndex = numbers.length - 1;
-
-        for (int j = 0; j < lastElementIndex; j++) {
-            if (numbers[j] > numbers[j + 1] && numbers[lastElementIndex] < numbers[j]){
+        for (int j = 0; j < numbers.length - 1; j++) {
+            if (numbers[j] > numbers[j + 1] && numbers[numbers.length - 1] < numbers[j]){
                 System.out.print(numbers[j] + " ");
             }
         }
-        System.out.println(numbers[lastElementIndex]);
+        System.out.println(numbers[numbers.length - 1]);
     }
 }
